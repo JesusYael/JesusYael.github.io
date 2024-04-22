@@ -1,0 +1,200 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
+body {
+    background-color: #a1887f;
+    font-family: 'Dancing Script', cursive;
+}
+
+.invitation-card {
+    margin: 50px auto;
+    width: 80%;
+    max-width: 600px;
+    padding: 20px;
+    background-color: #d5cfc7;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.1);
+    text-align: center;
+    border-radius: 15px;
+}
+
+
+.encabezado {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nombre {
+    width: auto;
+    text-align: right;
+}
+
+.texto {
+    width: auto;
+    text-align: right;
+}
+
+
+
+h1 {
+    color: #3e2723;
+    margin-bottom: 0px;
+    text-align: right;
+    font-size: 50px;
+}
+h2 {
+    color: #96807d;
+    margin-bottom: 0px;
+    text-align: right;
+    font-size: 40px;
+}
+
+p {
+    color: #3e2723;
+    line-height: 1.6;
+    font-size: 18px;
+}
+
+.mapa {
+    width: 50%;
+    height: 200px;
+    margin: 20px auto;
+}
+
+.date-details {
+    display: flex;
+    align-items: center;
+    margin-top: 0; /* remove top margin */
+    margin-bottom: 0; /* remove bottom margin */
+}
+
+.date-details .day,
+.date-details .date-number,
+.date-details .month-year {
+    margin-right: 10px;
+}
+
+.date-details .day {
+    font-size: 20px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.date-details .date-number {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.date-details .month-year {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 20px;
+}
+
+.date-details .hour-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.date-details .hour {
+    font-size: 40px;
+    font-weight: bold;
+    margin-right: 2px;
+}
+
+.date-details .hour-text {
+    font-size: 20px;
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+}
+
+.salon-details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 50px;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-left: 140px;
+}
+
+.date-details > :first-child,
+.contador > :first-child {
+    margin-top: 0; /* remove top margin */
+}
+
+.date-details > :last-child,
+.contador > :last-child {
+    margin-bottom: 0; /* remove bottom margin */
+}
+
+.contador {
+    margin-top: 0%;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 0%;
+}
+
+.text {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.parrafos .p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.register-button {
+    display: flex; /* Hace que el div sea un contenedor flex */
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+}
+
+.register-button button {
+    display: block; 
+    padding: 10px 20px;
+    background-color: #3e2723;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-family: inherit;
+    font-size: 20px; /* Asegura que el botón herede la fuente del contenedor padre */
+}
+
+#registerForm {
+    display: none;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #8f8679;
+    border-radius: 5px;
+}
+
+#registerForm form {
+    display: flex;
+    flex-direction: column;
+}
+
+#registerForm label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+#registerForm input[type="text"],
+#registerForm input[type="email"] {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#registerForm input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #3e2723;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}

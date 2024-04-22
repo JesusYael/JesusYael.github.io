@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="script.js"></script>
+    <script>
+        // Selecciona el elemento del contador
+        var counterElement = document.querySelector('.contador');
+
+        // Actualiza el contador cada segundo
+        setInterval(function() {
+            updateCounter(counterElement);
+        }, 1000);
+    </script>
+    <title>Invitación a Quinceañera</title>
+</head>
+<body>
+    <div class="invitation-card">
+        <div class="encabezado">
+            <div class="nombre"><h1>Charliza Eileene</h1></div>
+            <div class="texto"><h2>Mis quince años</h2></div>
+        </div>
+        <p>Le doy las gracias a Dios y a mis padres por guiarme a este punto de la vida
+        , cuando los sueños de una niña se convierten en los de una mujer.
+        </p>
+        <div class="parrafos">
+        <p class="p">Misa religiosa: </p> 
+        <p class="p">"Sagrado Corazón"</p>
+        </div>
+        
+        <p>Esperamos contar con su presencia para celebrar este día tan especial.</p>
+        <div class="contador">
+                
+        </div>
+        <div id="map" class="mapa" style="height: 200px;"></div>
+
+<script>
+  var map = L.map('map').setView([20.039, -98.297], 15); // Reemplaza con tus coordenadas y nivel de zoom
+
+  L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+  }).addTo(map);
+
+  L.marker([20.039, -98.297]).addTo(map) // Reemplaza con tus coordenadas para el marcador
+    .bindPopup('Quince años de Charliza Eileene<br>Salon Diamante<br>27 de Julio 2024<br>18:00 horas')
+    .openPopup();
+</script>
+        
+<div class="date-details">
+    <div class="day">Sábado</div>
+    <div class="date-number">27</div>
+    <div class="month-year">
+        <div class="month">Julio</div>
+        <div class="year">2024</div>
+    </div>
+    <div class="hour-details">
+        <div class="hour">18</div>
+        <div class="hour-text">Horas</div>
+    </div>
+    <div class="salon-details">
+        <p class="text">Salón Diamante</p>
+    </div>
+</div>
+
+<!-- Botón de registro -->
+<div class="register-button">
+    <button type="button" id="registerButton">Registrarse</button>
+</div>
+
+<!-- Formulario de registro -->
+<div id="registerForm" style="display: none;">
+    <form>
+        <label for="name">Nombre:</label><br>
+        <input type="text" id="name" name="name"><br>
+        <label for="email">Correo electrónico:</label><br>
+        <input type="email" id="email" name="email"><br>
+        <input type="submit" value="Enviar">
+    </form>
+</div>
+
+<script>
+    document.getElementById('registerButton').addEventListener('click', function() {
+        var form = document.getElementById('registerForm');
+        if (form.style.display === "none") {
+            form.style.display = "block";
+        } else {
+            form.style.display = "none";
+        }
+    });
+</script>
+    </div>
+</body>
+</html>
